@@ -1,0 +1,28 @@
+apiVersion: v1
+baseDomain: simon.local
+compute:
+- hyperthreading: Enabled
+  name: worker
+  replicas: 0
+controlPlane:
+  hyperthreading: Enabled
+  name: master
+  replicas: 3
+metadata:
+  name: demo
+networking:
+  networkType: OpenShiftSDN
+  clusterNetworks:
+  - cidr: 10.254.0.0/16
+    hostPrefix: 24
+  serviceNetwork:
+  - 172.30.0.0/24
+platform:
+  vsphere:
+    vcenter: XXXXXX
+    username: XXXXX
+    password: XXXXX
+    datacenter: Datacenter
+    defaultDatastore: VSAN
+pullSecret: XXXXXXXX
+sshKey: XXXXXXXX
