@@ -1,0 +1,17 @@
+export DOMAIN=Domain.local
+
+export CLUSTERID=demo
+
+export VCENTER_SERVER=vCenter_FQDN
+
+export VCENTER_USER="Username"
+
+export VCENTER_PASS='Password'
+
+export VCENTER_DC=Datacenter
+
+export VCENTER_DS=Datastore
+
+export PULL_SECRET=$(< Pull_Secret_Loction)
+
+export OCP_SSH_KEY=$(< id_rsa.pub_Location)
