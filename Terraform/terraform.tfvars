@@ -27,6 +27,9 @@ vsphere_datastore = "VSAN"
 
 // Name of the VM template to clone to create VMs for the cluster. The dev cluster has a template named "rhcos-latest".
 vm_template = "rhcos-4.3.0-x86_64-vmware"
+  
+//Set the vSphere network your VMs will be deployed to. 
+vm_network = "VM Network"
 
 // The machine_cidr where IP addresses will be assigned for cluster nodes.
 // Additionally, IPAM will assign IPs based on the network ID. 
