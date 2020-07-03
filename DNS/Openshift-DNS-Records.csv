@@ -1,0 +1,13 @@
+NodeName,IP,ClusterName,BaseDomain
+bootstrap-0,192.168.200.118,demo,Simon.local
+control-plane-0,192.168.200.113,demo,Simon.local
+control-plane-1,192.168.200.114,demo,Simon.local
+control-plane-2,192.168.200.115,demo,Simon.local
+etcd-0,192.168.200.113,demo,Simon.local
+etcd-1,192.168.200.114,demo,Simon.local
+etcd-2,192.168.200.115,demo,Simon.local
+compute-0,192.168.200.116,demo,Simon.local
+compute-1,192.168.200.117,demo,Simon.local
+api,192.168.200.8,demo,Simon.local
+api-int,192.168.200.8,demo,Simon.local
+*.apps,192.168.200.8,demo,Simon.local
