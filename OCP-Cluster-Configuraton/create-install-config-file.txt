@@ -1,0 +1,30 @@
+cat <<EOF >> install-config.yaml
+apiVersion: v1
+baseDomain: ${DOMAIN}
+compute:
+- hyperthreading: Enabled
+  name: worker
+  replicas: 0
+controlPlane:
+  hyperthreading: Enabled
+  name: master
+  replicas: 3
+metadata:
+  name: ${CLUSTERID}
+networking:
+  networkType: OpenShiftSDN
+  clusterNetworks:
+  - cidr: 10.254.0.0/16
+    hostPrefix: 24
+  serviceNetwork:
+  - 172.30.0.0/24
+platform:
+  vsphere:
+    vcenter: ${VCENTER_SERVER}
+    username: ${VCENTER_USER}
+    password: ${VCENTER_PASS}
+    datacenter: ${VCENTER_DC}
+    defaultDatastore: ${VCENTER_DS}
+pullSecret: '${PULL_SECRET}'
+sshKey: '${OCP_SSH_KEY}'
+EOF
